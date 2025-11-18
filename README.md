@@ -29,7 +29,7 @@ Output: Point cloud of shape
 ```bash
    1.model_baseline.py
 ```
-    Defines the ImageToPointCloud model:
+Define the Image to PointcloudModel:
 
 -ResNet backbone (configurable).
 
