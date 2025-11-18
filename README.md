@@ -26,9 +26,9 @@ Output: Point cloud of shape
   Evaluation: Automated benchmarking across checkpoints, CSV logging, and visualization.
 
 📂 Project Structure
-
+```bash
    1.model_baseline.py
-
+```
     Defines the ImageToPointCloud model:
 
 -ResNet backbone (configurable).
@@ -36,9 +36,9 @@ Output: Point cloud of shape
 -Regression head outputs 3D point cloud coordinates.
 
 -Flexible option for pretrained weights.
-
+```bash
 2.dataset_mono3d.py
-
+```
 Custom PyTorch dataset loader:
 
 -Loads images + ground truth point clouds from Mono3DPCL dataset.
@@ -46,9 +46,9 @@ Custom PyTorch dataset loader:
 -Applies transforms (resize, normalization).
 
 -Returns (image, point_cloud, category, label) tuples.
-
+```bash
 3.train_baseline.py
-
+```
 Training script:
 
 -Loads the Mono3DPCL dataset.
@@ -58,8 +58,9 @@ Training script:
 -Saves checkpoints (.pth files) into checkpoints/.
 
 -Supports resuming training from previous checkpoints.
-
+```bash
 4.eval_baseline.py
+```
 
 Evaluation script:
 
@@ -74,8 +75,9 @@ Evaluation script:
 -Logs results into eval_results.csv.
 
 -Visualizes predictions vs ground truth (with screenshots for first  few samples).
-
+```bash
 5.visualize.py
+```
 
 Visualization utilities using Open3D:
 
@@ -121,11 +123,11 @@ Visualization
 
 📈 Outputs
 
--Predictions: .ply files in predictions/
+-Reconstruction quality measured with Chamfer Distance
 
--Screenshots: .png comparison images (pred vs ground truth)
+-CSV logs for reproducibility
 
--Metrics: eval_results.csv with Chamfer Distance logs
+-Visualizations of predicted point clouds
 
 ⚙️ Dependencies
 
