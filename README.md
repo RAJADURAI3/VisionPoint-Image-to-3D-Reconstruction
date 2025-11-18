@@ -1,35 +1,35 @@
-🚀 Overview
-VisionPoint is a deep learning pipeline that reconstructs 3D point clouds directly from single RGB images. It demonstrates how 2D image features can be mapped into 3D geometry using a ResNet backbone and a regression head, evaluated with Chamfer Distance, and visualized interactively with Open3D.
+🚀Overview
+   VisionPoint is a deep learning pipeline that reconstructs 3D point clouds directly from single RGB images. It demonstrates how 2D image features can    be mapped into 3D geometry using a ResNet backbone and a regression head, evaluated with Chamfer Distance, and visualized interactively with Open3D.
 
 This project highlights expertise in:
 
--Computer Vision & 3D Vision
+   -Computer Vision & 3D Vision
 
--PyTorch & Torchvision
+  -PyTorch & Torchvision
 
--Open3D Visualization
+  -Open3D Visualization
 
--Reproducible Training & Evaluation Pipelines
+  -Reproducible Training & Evaluation Pipelines
 
 🏗️ Architecture
 
-Backbone: ResNet (18/34/50) for image feature extraction.
+  Backbone: ResNet (18/34/50) for image feature extraction.
 
-Head: Fully connected regression layers mapping features → 3D coordinates.
+  Head: Fully connected regression layers mapping features → 3D coordinates.
 
 Output: Point cloud of shape
 ```bash
 (batch_size, num_points, 3)
 ```
-Loss Function: Chamfer Distance — measures similarity between predicted and ground truth point clouds.
+  Loss Function: Chamfer Distance — measures similarity between predicted and ground truth point clouds.
 
-Evaluation: Automated benchmarking across checkpoints, CSV logging, and visualization.
+  Evaluation: Automated benchmarking across checkpoints, CSV logging, and visualization.
 
 📂 Project Structure
 
-1.model_baseline.py
+   1.model_baseline.py
 
-Defines the ImageToPointCloud model:
+    Defines the ImageToPointCloud model:
 
 -ResNet backbone (configurable).
 
